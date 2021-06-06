@@ -3,7 +3,11 @@
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:schemaLocation="http://www.springframework.org/schema/beans
         https://www.springframework.org/schema/beans/spring-beans.xsd">
-
-
+<!--    1.创建spring控制的资源-->
+<!--        将业务层的实现类放到spring中-->
+<!--    bean可以使用多个名称，使用name属性完成，中间使用,分隔-->
+<!--        class是bean的类型-->
+<!--    scope用于控制bean创建后的对象是否是单例的，不写的话默认是单例的，否则prototype就不是单例-->
+    <bean id="userService" scope="prototype" name="userService2,userService3" class="cn.cstube.service.impl.UserServiceImpl"/>
 
 </beans>
